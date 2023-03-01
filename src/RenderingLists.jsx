@@ -11,20 +11,18 @@ const listForRender = [
 ];
 
 export default function List({ isEven }) {
-  if (isEven) {
-    const filtered = listForRender.filter((item) => item.value % 2 === 0);
-    const filteredList = filtered.map((item) => <li>{item.name}</li>);
-    return (
-      <section>
-        <h1>Filtered list:</h1>
-        <ul>{filteredList}</ul>
-      </section>
-    );
-  }
-  const list = listForRender.map((item) => <li>{item.name}</li>);
+  const fullList = listForRender.map((item) => (
+    <li key={item.value}>{item.name}</li>
+  ));
+  const filtered = listForRender.filter((item) => item.value % 2 === 0);
+  const filteredList = filtered.map((item) => (
+    <li key={item.value}>{item.name}</li>
+  ));
+  const title = isEven ? "Filtered list" : "Full list";
+  const list = isEven ? filteredList : fullList;
   return (
     <section>
-      <h1>Full list:</h1>
+      <h1>{title}</h1>
       <ul>{list}</ul>
     </section>
   );
