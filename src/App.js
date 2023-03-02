@@ -4,6 +4,7 @@ import ChildrenWithTitle from "./ChildrenWithTitle";
 import { FirstReactComponent } from "./FirstReactComponent";
 import ConditionalRenderingComponent from "./ConditionalRendering";
 import List from "./RenderingLists";
+import InteractionEvents33 from "./InteractionEvents33";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <ConditionalRenderingComponent isBlue={null} />
       <List />
       <List isEven={true} />
+      <InteractionEvents33 />
     </>
   );
 }
