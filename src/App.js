@@ -5,6 +5,7 @@ import { FirstReactComponent } from "./FirstReactComponent";
 import ConditionalRenderingComponent from "./ConditionalRendering";
 import List from "./RenderingLists";
 import InteractionEvents33 from "./InteractionEvents33";
+import StatefulComponent34 from "./StatefulComponent34";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <List />
       <List isEven={true} />
       <InteractionEvents33 />
+      <StatefulComponent34 />
     </>
   );
 }
